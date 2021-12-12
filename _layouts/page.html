@@ -20,18 +20,18 @@
 </head>
 <body>
 
+<div class="container">
+
  {{ content}}
 
- <nav class="d-flex justify-content-between align-items-center border-top bg-white" style="position: fixed; bottom:0; right:0; left:0">
-    <h2 style="font-weight: 100;" class="ms-2 mb-0 p-0 text-center">Richard Schuhmann</h2>
-    <a class="btn btn-lg btn-outline-dark m-2"  data-bs-toggle="offcanvas" href="#offcanvasExample"><i class="bi bi-list"></i></a>
+</div>
+
+ <nav class="d-flex justify-content-between align-items-center border-top bg-dark text-white" style="position: fixed; bottom:0; right:0; left:0">
+  <h2 style="font-weight: 100;" class="ms-2 mb-0 p-0 text-center"><a style="text-decoration: none;" class="text-white" href="/">Richard Schuhmann</a> </h2>
+  <a class="btn btn-lg btn-outline-light m-2"  data-bs-toggle="offcanvas" href="#offcanvasExample"><i class="bi bi-list"></i></a>
  </nav>
 
- <div style="height: 90vh;" class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel">menu</h5>
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
+ <div style="height: auto;" class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-body">
       <div>
         Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
@@ -49,6 +49,10 @@
       <div class="offcanvas-footer">
           blub
       </div>
+    </div>
+    <div style="position:absolute; bottom: 0;left: 0;right:0;" class="d-flex justify-content-between">
+      <p class="m-auto"><a href="./imprint">Imprint</a> | <a href="./data_policy.html">Privacy Policy</a></p>
+      <a class="btn btn-danger btn-lg m-2" data-bs-dismiss="offcanvas"><i class="bi bi-x"></i></a>
     </div>
   </div>
 
