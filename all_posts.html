@@ -1,0 +1,31 @@
+---
+layout: page
+---
+
+<div id="posts" class="min-vh-100 pt-5">
+    <h1 class="display-5 text-center mb-3">All Posts</h1>
+    <div class="row">
+
+        {% for post in site.posts limit:3 %}
+
+        <div class="col-12 col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{post.title}}</h5>
+                    <small><i class="bi bi-calendar3"></i> {{post.date | date: "%d-%m-%Y"}}</small>
+                    <hr>
+                    <p class="card-text">{{post.content |truncatewords: 60}}</p>
+                    <div class="d-flex justify-content-end">
+                        <a href="#" class="btn btn-dark">Read more</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        {% endfor%}
+    </div>
+    <div style="height: 75px; width: 100%;">&nbsp;</div>
+
+
+</div>
