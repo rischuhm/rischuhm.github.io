@@ -1,51 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richard Schuhmann</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-<style>
-    *{font-family: Merriweather;}
-</style>
-</head>
+  {% include header.html %}
 <body>
 
-<div class="container">
+<div class="container mt-md-5">
 
  {{ content}}
 
 </div>
 
- <nav class="d-flex justify-content-between align-items-center border-top bg-dark text-white d-md-none" style="position: fixed; bottom:0; right:0; left:0">
-  <h2 style="font-weight: 100;" class="ms-2 mb-0 p-0 text-center"><a style="text-decoration: none;" class="text-white" href="/">Richard Schuhmann</a> </h2>
-  <a class="btn btn-lg btn-outline-light m-2"  data-bs-toggle="offcanvas" href="#offcanvasExample"><i class="bi bi-list"></i></a>
- </nav>
-
- <div style="height: auto;" class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-    <div class="offcanvas-body text-dark">
-      <h1 class="display-5 text-center">MENU</h1>
-      <hr>
-        <p><a class="text-dark" style="text-decoration: none;" href="./index.html">Start</a></p>
-        <p><a class="text-dark" style="text-decoration: none;" href="./portfolio.html">Portfolio</a></p>
-        <hr>
-        <p><b>BLOG</b></p>
-        <p><a class="text-dark" style="text-decoration: none;"href="./all_posts.html">All Posts</a></p>
-    </div>
-    <div style="position:absolute; bottom: 0;left: 0;right:0;" class="d-flex justify-content-between">
-      <p class="m-auto"><a class="text-dark" style="text-decoration: none;" href="./imprint">Imprint</a> | <a class="text-dark" style="text-decoration: none;" href="./data_policy.html">Privacy Policy</a></p>
-      <a class="btn btn-danger btn-lg m-2" data-bs-dismiss="offcanvas"><i class="bi bi-x"></i></a>
-    </div>
-  </div>
+ {% include nav_desktop.html %}
+ {% include nav_mobile.html %}
 
 </body>
 </html>
