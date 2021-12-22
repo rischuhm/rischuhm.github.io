@@ -27,7 +27,11 @@ tags: "blog, programming, portfolio, richard, schuhmann, devops, python, webdev,
                 <div class="card h-100">
                     <div class="card-body">
                         <h5 class="card-title">{{post.title}}</h5>
-                        <small><i class="bi bi-calendar3"></i> {{post.date | date: "%d-%m-%Y"}}</small>
+                        <div class="d-flex justify-content-between">
+                            <p><i class="bi bi-calendar3"></i> {{post.date | date: "%d-%m-%Y"}}</p>
+                          <p><i class="bi bi-hourglass-split"></i>~{{ post.content | number_of_words | divided_by: 240  }} mins.</p>
+                        </div>
+
                         <hr>
                         <p class="card-text">{{post.description}}</p>
                     </div>
