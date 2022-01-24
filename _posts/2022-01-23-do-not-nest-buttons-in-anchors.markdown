@@ -35,9 +35,9 @@ To make it even clearer -  the site specifies interactive elements as *" content
 - video (if the controls attribute is present)
 
 <br>
-An idea of why this nesting would lead to different problems lies in the underlying event order if a user clicks on such a nested construct. To get a better understanding, let me show an example: 
+An idea of why this nesting would lead to different problems lies in the underlying event order if a user clicks on such a nested construct. To get a better understanding, let me show an example (click on the play button to see the rendered result): 
 
-<iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@rischuhm/Button-Anchor-Test"></iframe>
+<iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@rischuhm/Button-Anchor-Test?embed=true"></iframe>
 
 
 If a user would click on this button, it would not lead me to my page but delete the form's input. I can say that the inner logic would preferably be executed from testing in Chrome. If this behavior is consistent across browsers, I wouldn't know. Anyway, you'd always have to keep in mind where your buttons and anchors are placed to avoid undesired results - like submitting or deleting form inputs. 
@@ -47,28 +47,8 @@ If a user would click on this button, it would not lead me to my page but delete
 
 Use things for what they are meant to be used. For example, use anchors to link to content on your page or different sites. On the other hand, if you interact with forms, use button tags inside the form elements. That way, you keep the separation of concerns, and you can also keep your styling clear. If you insist on your anchors looking like buttons, consider using CSS. It takes you ten lines of code (or more - depending on what you want to achieve) to generate a simple button class that looks like the default button on Google Chrome on Windows:
 
-```
-<style>
-.btn{
-font-family: sans-serif;
-font-size: small;
-border: 1px solid rgb(118, 118, 118);
-border-radius: 3px;
-padding: 2px 6px;
-margin:2px;
-background-color:  rgb(239, 239, 239);
-cursor: context-menu;
-}
+<iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@rischuhm/Button-CSS?embed=true"></iframe>
 
-.btn:hover{
-background-color: rgb(212, 212, 212);
-}
-</style>
-
-<body>
-<a class="btn">Button</a>
-</body>
-```
 
 <br>
 ## For the lazy - CSS Frameworks
