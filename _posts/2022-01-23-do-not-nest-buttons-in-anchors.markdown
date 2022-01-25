@@ -37,7 +37,7 @@ To make it even clearer -  the site specifies interactive elements as *" content
 <br>
 An idea of why this nesting would lead to different problems lies in the underlying event order if a user clicks on such a nested construct. To get a better understanding, let me show an example (click on the play button to see the rendered result): 
 
-<iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@rischuhm/Button-Anchor-Test?embed=true"></iframe>
+<iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@rischuhm/Button-Anchor-Test?lite=true"></iframe>
 
 
 If a user would click on this button, it would not lead me to my page but delete the form's input. I can say that the inner logic would preferably be executed from testing in Chrome. If this behavior is consistent across browsers, I wouldn't know. Anyway, you'd always have to keep in mind where your buttons and anchors are placed to avoid undesired results - like submitting or deleting form inputs. 
