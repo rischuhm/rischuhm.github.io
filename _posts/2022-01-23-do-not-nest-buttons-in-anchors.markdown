@@ -35,19 +35,29 @@ To make it even clearer -  the site specifies interactive elements as *" content
 - video (if the controls attribute is present)
 
 <br>
-An idea of why this nesting would lead to different problems lies in the underlying event order if a user clicks on such a nested construct. To get a better understanding, let me show an example (click on the play button to see the rendered result): 
+An idea of why this nesting would lead to different problems lies in the underlying event order if a user clicks on such a nested construct. To get a better understanding, let me show an example: 
 
-<iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@rischuhm/Button-Anchor-Test?lite=true"></iframe>
+<p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="result" data-slug-hash="OJOJNBY" data-preview="true" data-user="richardschuh" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/richardschuh/pen/OJOJNBY">
+  Button Anchor Nesting</a> by RichardSchuh (<a href="https://codepen.io/richardschuh">@richardschuh</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
-
-If a user would click on this button, it would not lead me to my page but delete the form's input. I can say that the inner logic would preferably be executed from testing in Chrome. If this behavior is consistent across browsers, I wouldn't know. Anyway, you'd always have to keep in mind where your buttons and anchors are placed to avoid undesired results - like submitting or deleting form inputs. 
+<br>
+If a user clicks on this button, it will not lead to the linked page. Instead it deletes the form's input. In conclusion, the nested element's interactive function is executed. If this behavior is consistent across all web browsers, I wouldn't know. Anyway, you'd always have to keep in mind where your buttons and anchors are placed to avoid undesired results.
 
 <br>
 ## A better approach
 
 Use things for what they are meant to be used. For example, use anchors to link to content on your page or different sites. On the other hand, if you interact with forms, use button tags inside the form elements. That way, you keep the separation of concerns, and you can also keep your styling clear. If you insist on your anchors looking like buttons, consider using CSS. It takes you ten lines of code (or more - depending on what you want to achieve) to generate a simple button class that looks like the default button on Google Chrome on Windows:
 
-<iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@rischuhm/Button-CSS?embed=true"></iframe>
+<p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="result" data-slug-hash="OJOJNKK" data-preview="true" data-user="richardschuh" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/richardschuh/pen/OJOJNKK">
+  Button CSS</a> by RichardSchuh (<a href="https://codepen.io/richardschuh">@richardschuh</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 
 <br>
